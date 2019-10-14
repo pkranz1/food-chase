@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SignUp from './components/SignUp/SignUp';
+import './App.css';
 import {
   BrowserRouter as Router,
   Route,
@@ -12,9 +13,9 @@ const App = () => {
   const [retypedPassword, setRetypedPassword] = useState('');
 
   return (
-    <SignUp
-      
-    />
+    <div class="container">
+      <SignUp/>
+    </div>
   );
 }
 
