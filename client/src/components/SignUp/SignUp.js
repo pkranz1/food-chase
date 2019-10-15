@@ -1,41 +1,46 @@
 import React from 'react';
-import { Form, Button } from 'react-bootstrap';
 import './SignUp.css';
-
 const SignUp = ({ username, password, retypedPassword, 
   handleUsernameChange, handlePasswordChange, handleRetypedPasswordChange }) => {
     return (
-      <div class="container justify-content-center sign-up-form">
+      <div class="container">
         <h2 class="text-center">SignUp</h2>
-        <Form>
-          <Form.Group>
-            <Form.Label>username:</Form.Label>
-            <Form.Control
-              name="username"
-              type="text"
-              placeholder="username"
-              value={ username }
-              onChange={ ({ target }) => handleUsernameChange(target.value) }
-            />
-            <Form.Label>password</Form.Label>
-            <Form.Control
-              name="password"
-              type="password"
-              placeholder="password"
-              value={ password }
-              onChange={ ({ target }) => handlePasswordChange(target.value) }
-            />
-            <Form.Label>re-enter password</Form.Label>
-            <Form.Control
-              name="reEnter password"
-              type="password"
-              placeholder="re-enter password"
-              value={ retypedPassword }
-              onChange={ ({ target }) => handleRetypedPasswordChange(target.value)}
-            />
-            <Button variant="primary" type="submit">Sign-up</Button>
-            </Form.Group>
-        </Form>
+        <form>
+          <div class="form-group">
+            <label>Email address</label>
+              <input
+                class="form-control"
+                name="email"
+                type="email"
+                placeholder="doe@example.com"
+                value={ username }
+                onChange={ ({ target }) => handleUsernameChange(target.value) }
+              />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+              <input
+                class="form-control"
+                name="password"
+                type="password"
+                placeholder="password"
+                value={ password }
+                onChange={ ({ target }) => handlePasswordChange(target.value) }
+              />
+          </div>
+          <div class="form-group">
+            <label>Re-enter password</label>
+              <input
+                class="form-control"
+                name="reEnter password"
+                type="password"
+                placeholder="re-enter password"
+                value={ retypedPassword }
+                onChange={ ({ target }) => handleRetypedPasswordChange(target.value)}
+              />
+          </div>
+          <button class="btn btn-primary" type="submit">Sign-up</button>
+        </form>
       </div>
     );
 }
