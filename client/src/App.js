@@ -13,8 +13,10 @@ const App = () => {
   const [retypedPassword, setRetypedPassword] = useState('');
 
   return (
-    <div class="container">
-      <SignUp/>
+    <div>
+      <Router>
+        
+      </Router>
     </div>
   );
 }
