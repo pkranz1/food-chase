@@ -1,2 +1,0 @@
-https://react-bootstrap.github.io/
-Helps you understand react-bootstrap package.
