@@ -1,10 +1,42 @@
 import React from 'react';
-import './SignUp.css';
-const SignUp = ({ username, password, retypedPassword, 
-  handleUsernameChange, handlePasswordChange, handleRetypedPasswordChange }) => {
-    return (
-      <div class="container">
-        <h2 class="text-center">SignUp</h2>
+
+const SignupLogin = ({ username, password, retypedPassword, handleUsernameChange, 
+  handlePasswordChange, handleRetypedPasswordChange }) => {
+  return (
+    <div className="col mx-auto">
+    <div className="card">
+      <div className="card-body">
+        <h2 className="card-title">Customer SignUp</h2>
+        <div className="container">
+          <form>
+            <div className="form-group">
+              <label for="emailInput">Email address</label>
+              <input
+                className="form-control"
+                name="email"
+                type="email"
+                placeholder="doe@example.come"
+              />
+            </div>
+            <div className="form-group">
+              <label for="passwordInput">Password</label>
+              <input
+                className="form-control"
+                name="password"
+                type="password"
+                placeholder="password"
+              />
+            </div>
+            <button className="btn btn-primary" type="submit">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    /*
+    <div class="container">
+      <h2 class="text-center">SignUp</h2>
         <form>
           <div class="form-group">
             <label>Email address</label>
@@ -42,6 +74,7 @@ const SignUp = ({ username, password, retypedPassword,
           <button class="btn btn-primary" type="submit">Sign-up</button>
         </form>
       </div>
+      */
     );
 }
-export default SignUp;
+export default SignupLogin;

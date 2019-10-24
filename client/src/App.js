@@ -10,6 +10,7 @@ import PostsListPage from './pages/PostsListPage';
 import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
+import CustomerSignupPage from './pages/CustomerSignupPage';
 
 import './App.css';
 
@@ -37,7 +38,10 @@ function Navigation(props) {
 
 class App extends React.Component {
   render() {
+
     return (
+      <CustomerSignupPage/>
+      /*
         <Router>
           <Navigation />
           <div className="container-fluid text-center">
@@ -51,6 +55,7 @@ class App extends React.Component {
             </div>
           </div>
         </Router>
+        */
     );
   }
 }
