@@ -6,42 +6,32 @@ import {
   Link,
   NavLink
 } from 'react-router-dom';
-import PostsListPage from './pages/PostsListPage';
-import PostFormPage from './pages/PostFormPage';
-import ShowPostPage from './pages/ShowPostPage';
-import AboutUsPage from './pages/AboutUsPage';
-import CustomerSignupPage from './pages/CustomerSignupPage';
 
-import './App.css';
+import Navigation from './components/Navigation';
+import LoginPage from './pages/LoginPage';
+import WrongPage from './components/WrongPage';
 
-
-function Navigation(props) {
-  return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
-      <Link className="navbar-brand" to="/">Micro Blog</Link>
-      <ul className="navbar-nav mr-auto">
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/posts/new">
-            Create a Micro Post
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/about-us">
-            About Us
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+function App() {
+  return(
+    <Router>
+      <div className="container-fluid">
+        <div>
+          <Switch>
+            <Route path="/Login" component={ LoginPage }/>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
+  
 }
 
-
+/*
 class App extends React.Component {
   render() {
-
     return (
-      <CustomerSignupPage/>
-      /*
+      
+      <LoginPage/>
         <Router>
           <Navigation />
           <div className="container-fluid text-center">
@@ -55,10 +45,10 @@ class App extends React.Component {
             </div>
           </div>
         </Router>
-        */
     );
   }
 }
+*/
 
 
 export default App;
