@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 
 import Navigation from './components/Navigation';
-import LoginPage from './pages/LoginPage';
+import CustomerSignupPage from './pages/CustomerSignupPage';
 import WrongPage from './components/WrongPage';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <div className="container-fluid">
         <div>
           <Switch>
-            <Route path="/Login" component={ LoginPage }/>
+            <Route path="/Login" component={ CustomerSignupPage }/>
           </Switch>
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 function LoginForm({ email, password, handleEmailChange, handlePasswordChange }) {
   return(
-    <div className="form-group">
+    <div className="container-fluid">
       <div className="form-group">
         <label>Email address</label>
         <input
