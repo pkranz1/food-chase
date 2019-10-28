@@ -9,17 +9,17 @@ import {
 
 import Navigation from './components/Navigation';
 import CustomerSignupPage from './pages/CustomerSignupPage';
+import LoginPage from './pages/LoginPage';
 import WrongPage from './components/WrongPage';
 
 function App() {
   return(
     <Router>
       <div className="container-fluid">
-        <div>
-          <Switch>
-            <Route path="/Login" component={ CustomerSignupPage }/>
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/login" component={ LoginPage } />
+          <Route path="/" component={ CustomerSignupPage }/>
+        </Switch>
       </div>
     </Router>
   );
