@@ -2,11 +2,11 @@ import React from 'react';
 
 function LoginForm({ email, password, handleEmailChange, handlePasswordChange }) {
   return(
-    <div className="container-fluid">
+    <div>
       <div className="form-group">
         <label>Email address</label>
         <input
-          className="form-control w-50"
+          className="form-control"
           name="email"
           type="email"
           placeholder="doe@example.com"
@@ -17,7 +17,7 @@ function LoginForm({ email, password, handleEmailChange, handlePasswordChange })
       <div className="form-group">
         <label>Password</label>
         <input
-          className="form-control w-50"
+          className="form-control"
           name="password"
           type="password"
           placeholder="password"

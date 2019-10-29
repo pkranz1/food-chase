@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navlink } from 'react-router-dom';
-import LoginForm from '../components/LoginForm';
+import SignupForm from '../components/SignupForm';
 
 class CustomerSignupPage extends React.Component {
   constructor(props) {
@@ -36,33 +36,37 @@ class CustomerSignupPage extends React.Component {
 
   render() {
     return(
-      <div className="container card w-50 p-3 my-auto mx-auto rounded-lg shadow">
-        <div className="card-body">
-          <h2 className="card-title text-center">Customer Signup</h2>
-          <form>
-            <LoginForm
-              email={ this.state.email }
-              password={ this.state.password }
-              handleEmailChange={ this.handleEmailChange }
-              handlePasswordChange={ this.handlePasswordChange }
-            />
-            <div className={ `form-group ${ this.props.hide }` }>
-              <label>Retype Password</label>
-              <input 
-                className="form-control w-50"
-                name="retype-password"
-                type="password"
-                value={ this.state.retypedPassword }
-                onChange= { ({ target }) => this.handleRetypedPasswordChange(target.value) }
+      <div className="row">
+      <div className="col-6">
+        <h1>Wait...What am I signing up for?</h1>
+        <h2>The hottest app in NYC. Get amazing meals for <strong>insanely </strong>
+          cheap. So cheap these prices should be illegal. Seriously, keep it on the down-low
+          we are not sure if this is legal. It must be though because we're saving the 
+          enviornment! The enviornment? Oh yeah, <strong>the enviornment!!</strong>
+        </h2>
+      </div>
+      <div className="col-6">
+        <div className="card my-auto mx-auto rounded-lg shadow">
+          <div className="card-body w-50">
+            <h2 className="card-title">Customer Signup</h2>
+            <form>
+              <SignupForm
+                email={ this.state.email }
+                password={ this.state.password }
+                retypedPassword={ this.state.retypedPassword }
+                handleEmailChange={ this.handleEmailChange }
+                handlePasswordchange={ this.handlePasswordChange }
+                handleRetypedPassword={ this.handleRetypedPasswordChange }
               />
-            </div>
-            <button className="btn btn-primary">Login</button>
+                <button className="btn btn-primary">Login</button>
             </form>
             <div className="btn-group" role="group">
               <button className="btn btn-secondary">Already a Member?</button>
               <button className="btn btn-secondary">Own a Resturant?</button>
             </div>
           </div>
+        </div>
+      </div>
       </div>
     );
     

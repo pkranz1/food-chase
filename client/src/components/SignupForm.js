@@ -5,7 +5,7 @@ function SignupForm({ email, password, retypedPassword,
   handleEmailChange, handlePasswordchange, handleRetypedPassword }) {
   
   return(
-    <div className="container-fluid">
+    <div className="form-group">
       <LoginForm 
         email={ email }
         password={ password }
@@ -15,7 +15,7 @@ function SignupForm({ email, password, retypedPassword,
       <div className="form-group">
         <label>Retype password</label>
         <input
-          className="form-control w-50"
+          className="form-control"
           name="retyped-password"
           type="password"
           placeholder="password"
