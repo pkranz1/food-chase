@@ -18,10 +18,10 @@ function App() {
     <Router>
       <Navigation />
       <div className="container-fluid">
-        <div>
+        <div className="row">
           <Switch>
-          <Route path="/signup/customer" component={ CustomerSignupPage } />
-            <Route path="/Login" component={ LoginPage }/>
+            <Route path="/signup/customer" component={ CustomerSignupPage } />
+            <Route path="/login" component={ LoginPage }/>
             <Route path="/" component={ HomePage } />
           </Switch>
         </div>
