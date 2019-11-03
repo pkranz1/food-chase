@@ -1,8 +1,8 @@
 import React from 'react';
 
-function LoginForm({ email, password, handleEmailChange, handlePasswordChange }) {
+function LoginForm({ handleChange }) {
   return(
-    <div>
+    <div className="form-group">
       <div className="form-group">
         <label>Email address</label>
         <input
@@ -10,8 +10,7 @@ function LoginForm({ email, password, handleEmailChange, handlePasswordChange })
           name="email"
           type="email"
           placeholder="doe@example.com"
-          value={ email }
-          onChange={ ({ target }) => handleEmailChange(target.value)}
+          onChange={ handleChange }
         />
       </div>
       <div className="form-group">
@@ -20,9 +19,8 @@ function LoginForm({ email, password, handleEmailChange, handlePasswordChange })
           className="form-control"
           name="password"
           type="password"
-          placeholder="password"
-          value={ password }
-          onChange={ ({ target }) => handlePasswordChange(target.value) }
+          placeholder="shh, it's a secret!"
+          onChange={ handleChange }
         />
       </div>
     </div>

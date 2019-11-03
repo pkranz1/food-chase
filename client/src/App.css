@@ -1,23 +1,30 @@
-/*.App {
-  text-align: center;
+/****************************** 
+Logged out stylings
+signup and login forms
+******************************/
+.card.logged-out {
+  background-color: aquamarine;
 }
 
-.App-logo {
-  height: 40vmin;
+.card.logged-out .btn {
+  background-color: coral;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card.logged-out .btn:hover {
+  color: aquamarine;
 }
 
-.App-link {
-  color: #09d3ac;
+/***************************
+Logged in stylings
+***************************/
+.card.logged-in {
+  background-color: coral;
 }
-*/
+
+.card.logged-in .btn {
+  background-color: aquamarine;
+}
+
+.card.logged-in .btn:hover {
+  color: coral;
+}

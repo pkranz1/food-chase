@@ -3,8 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "filepond": "^4.7.4",
+    "filepond-plugin-file-validate-type": "^1.2.4",
+    "filepond-plugin-image-exif-orientation": "^1.0.6",
+    "filepond-plugin-image-preview": "^4.5.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-filepond": "^7.0.1",
+    "react-load-script": "0.0.6",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.2"
   },

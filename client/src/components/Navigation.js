@@ -13,7 +13,7 @@ function Navigation(props) {
         </li>
         <li className="nav-item">
           <NavLink className="nav-link" exact to="/signup/customer">
-            Customer Sign up
+            Sign up
           </NavLink>
         </li>
         <li className="nav-item">
