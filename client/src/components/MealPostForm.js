@@ -24,6 +24,7 @@ function MealPostForm({ handleChange, handleSubmit }) {
                   className="form-control" 
                   rows="3" type="text" 
                   name="description"
+                  placeholder="an Italian-American dish of golden pan-fried chicken cutlets and mushrooms in a rich Marsala wine sauce."
                   onChange={ handleChange }
                 ></textarea>
               </div>

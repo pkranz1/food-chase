@@ -1,7 +1,7 @@
 import React from 'react';
 import MealPost from '../../components/MealPost';
 import MealPostForm from '../../components/MealPostForm';
-import FileUploader from '../../components/FileUploader';
+
 
 class CreateMealPostPage extends React.Component {
   constructor(props) {
@@ -14,18 +14,33 @@ class CreateMealPostPage extends React.Component {
         quantity: null,
       },
     }
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    const name = event.target.name;
+    const value = event.target.value;
+    const post = this.state.post;
+
+    this.setState({
+      post: {
+        ...post,
+        [name]: value,
+      }
+    });
   }
 
   render() {
-    const dishName = this.state.post.dishName;
-    const description = this.state.post.description
-    const cuisine = this.state.post.cuisine;
-    const quantity = this.state.post.quantity;
-    
+    console.log('post info', this.state.post)
     return(
       <div className="row">
-        <MealPostForm />
-        <MealPost />
+        <MealPostForm
+          handleChange={ this.handleChange }
+        />
+        <MealPost 
+          post={ this.state.post }
+        />
       </div>
     );
   }
