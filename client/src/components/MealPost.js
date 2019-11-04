@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MealPost({ post }) {
+function MealPost({ post, pictures }) {
   return(
     <div className="col-sm-4 col-md-5 col-lg-6 text-center">
       <h1>The Post</h1>
@@ -12,7 +12,7 @@ function MealPost({ post }) {
         </div>
         <div className="row">
           <div className="col-sm-3">
-            <img alt={`${ post.dishName }`}>{ /*Image of the food*/ }</img>
+            <img alt={`${ post.dishName }`}>{ pictures }</img>
           </div>
           <div className="col-sm-6">
             <p>{ post.description }</p>

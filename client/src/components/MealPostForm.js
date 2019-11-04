@@ -1,7 +1,7 @@
 import React from 'react';
 import FileUploader from './FileUploader';
 
-function MealPostForm({ handleChange, handleSubmit }) {
+function MealPostForm({ pictures, handlePicture, handleChange, handleSubmit }) {
   return(
     <div className="col-sm-8 col-md-7 col-lg-6">
       <div className="card shadow rounded logged-in">
@@ -56,7 +56,10 @@ function MealPostForm({ handleChange, handleSubmit }) {
             </div>
             <div className="form-group">
               <div className="row">
-                <FileUploader />
+                <FileUploader 
+                  pictures={ pictures }
+                  updatePictures={ handlePicture }
+                />
               </div>
             </div>  
             <button className="btn" type="submit">Post</button>

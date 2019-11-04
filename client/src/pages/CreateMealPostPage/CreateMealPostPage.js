@@ -13,9 +13,11 @@ class CreateMealPostPage extends React.Component {
         cuisine: null,
         quantity: null,
       },
+      pictures: [],
     }
 
     this.handleChange = this.handleChange.bind(this);
+    this.handlePicture = this.handlePicture.bind(this);
   }
 
   handleChange(event) {
@@ -31,12 +33,21 @@ class CreateMealPostPage extends React.Component {
     });
   }
 
+  handlePicture(images) {
+    this.setState({
+      pictures: images.map(image => image.file),
+    });
+    console.log('pictures', this.state.pictures);
+  }
+
   render() {
     console.log('post info', this.state.post)
     return(
       <div className="row">
         <MealPostForm
           handleChange={ this.handleChange }
+          handlePicture={ this.handlePicture }
+          pictures={ this.state.pictures }
         />
         <MealPost 
           post={ this.state.post }
