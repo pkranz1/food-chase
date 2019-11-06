@@ -35,12 +35,12 @@ class LoginPage extends React.Component {
     console.log(this.state.userInfo);
     return(
       <div className="row justify-content-center">
-        <div className="col-sm-3 col-md-5 col-lg-7">
+        <div className="col-sm-3 col-md-5 col-lg-7 mt-5 mb-5 text-center">
           <h1>Some Big text</h1>
           <h3>Not as big but still pretty big text</h3>
         </div>
 
-        <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div className="col-sm-9 col-md-7 col-lg-5 mt-5 mb-5 ">
           <div className="card shadow rounded logged-out">
             <div className="card-body">
             <h5 className="card-title text-center">Sign In</h5>
