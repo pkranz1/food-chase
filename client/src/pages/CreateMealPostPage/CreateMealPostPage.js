@@ -1,7 +1,7 @@
 import React from 'react';
 import MealPost from '../../components/MealPost';
 import MealPostForm from '../../components/MealPostForm';
-//mealpost
+
 
 
 class CreateMealPostPage extends React.Component {
