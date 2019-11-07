@@ -47,12 +47,12 @@ class RestaurantSignUpPage extends React.Component {
     console.log('restaurant info:', this.state.restaurantInfo);
     return(
       <div className="row">
-        <div className="col-sm-3 col-md-5 col-lg-6">
+        <div className="col-sm-3 col-md-5 col-lg-6 mt-5 mb-5 text-center">
           <h1>Some text</h1>
           <h3>More text but smaller</h3>
         </div>
 
-        <div className="col-sm-9 col-md-7 col-lg-6">
+        <div className="col-sm-9 col-md-7 col-lg-6 mt-5 mb-5">
           <div className="card shadow rounded logged-out">
             <div className="card-body">
               <h5 className="card-title text-center">Restaurant Sign Up</h5>
@@ -123,7 +123,10 @@ class RestaurantSignUpPage extends React.Component {
                     </div>
                   </div>
                 </div>
-                <button className="btn" type="submit">Sign up</button>
+                <button className="btn" type="submit">
+                  <i class="fas fa-sign-in-alt"></i>
+                  Sign up
+                </button>
               </form>
             </div>
           </div>

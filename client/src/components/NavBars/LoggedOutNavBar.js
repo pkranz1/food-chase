@@ -15,11 +15,6 @@ function LoggedOutNavigation() {
               Sign up
             </NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" exact to="/login">
-              Sign in
-            </NavLink>
-          </li>
         </ul>
       </div>
     </nav>

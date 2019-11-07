@@ -38,12 +38,12 @@ class CustomerSignUpPage extends React.Component {
     console.log(this.state.userInfo);
     return(
       <div className="row justify-content-center">
-        <div className="col-sm-3 col-md-5 col-lg-7">
+        <div className="col-sm-3 col-md-5 col-lg-7 mt-5 mb-5 text-center">
           <h1>Some Big text</h1>
           <h3>Not as big text</h3>
         </div>
 
-        <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div className="col-sm-9 col-md-7 col-lg-5 mt-5 mb-5">
           <div className="card shadow rounded logged-out">
             <div className="card-body">
               <h5 className="card-title text-center">Customer Sign Up</h5>
@@ -54,11 +54,18 @@ class CustomerSignUpPage extends React.Component {
                 />
                 <button className="btn" type="submit">Sign Up</button>
               </form>
-              
-              <p className="text-center">
-                <Link to="/signup/restaurant">Own a Restaurant?</Link>
-              </p>
-             
+              <div className="row text-center pt-4">
+                <div className="col-sm-6">
+                  <p>
+                    <Link to="/signup/restaurant">Own a Restaurant?</Link>
+                  </p>
+                </div>
+                <div className="col-sm-6">
+                  <p>
+                    <Link to="/login">Already a member?</Link>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
