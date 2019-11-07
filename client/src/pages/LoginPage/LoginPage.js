@@ -1,4 +1,7 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
+
+import auth from '../../services/auth';
 import LoginForm from '../../components/LoginForm';
 import './LoginPage.css';
 
@@ -9,10 +12,13 @@ class LoginPage extends React.Component {
       userInfo: {
         email: '',
         password: '',
-      }
+      },
+      loginFailed: false,
+      redirectTo: false,
+
     }
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleLogin = this.handleLogin.bind(this);
   }
   handleChange(event) {
     const name = event.target.name;
@@ -27,12 +33,34 @@ class LoginPage extends React.Component {
     });
   }
 
-  handleSubmit() {
-
+  handleLogin(event) {
+    event.preventDefault();
+    const { email, password } = this.state.userInfo;
+    
+    console.log('email:', email, 'password:', password);
+    
+    auth.authenticate(email, password)
+    .then((user) => {
+      this.setState({ redirectTo: true });
+    })
+    .catch((err) => {
+      this.setState({ failed: true });
+    });
   }
 
   render() {
     console.log(this.state.userInfo);
+    const { redirectTo, failed } = this.state;
+    let err = '';
+
+    if(redirectTo) {
+      return(<Redirect to="/" />);
+    }
+
+    if(failed) {
+      err = <div className="alert alert-danger" role="alert">Login Failed</div>;
+    }
+    
     return(
       <div className="row justify-content-center">
         <div className="col-sm-3 col-md-5 col-lg-7 mt-5 mb-5 text-center">
@@ -42,10 +70,11 @@ class LoginPage extends React.Component {
 
         <div className="col-sm-9 col-md-7 col-lg-5 mt-5 mb-5 ">
           <div className="card shadow rounded logged-out">
+            { err }
             <div className="card-body">
             <h5 className="card-title text-center">Sign In</h5>
 
-              <form onSubmit={ this.handleSubmit } method="post">
+              <form onSubmit={ this.handleLogin } method="post">
                 <LoginForm 
                 handleChange={ this.handleChange }
                 />
