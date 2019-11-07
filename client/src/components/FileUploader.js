@@ -9,16 +9,14 @@ import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
 
 registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
 
-function FileUploader() {
-  
-  const [files, updateFiles] = useState([]);
+function FileUploader({ pictures, updatePictures }) {
   return(
     <div className="col">
       <FilePond
-        files={ files }
+        files={ pictures }
         allowMultiple={ false }
         maxFiles={ 1 }
-        onupdatefiles={ updateFiles }
+        onupdatefiles={ updatePictures }
         labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
       />
     </div>
