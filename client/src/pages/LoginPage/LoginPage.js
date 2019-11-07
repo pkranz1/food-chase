@@ -41,6 +41,7 @@ class LoginPage extends React.Component {
     
     auth.authenticate(email, password)
     .then((user) => {
+      console.log('user:', user);
       this.setState({ redirectTo: true });
     })
     .catch((err) => {

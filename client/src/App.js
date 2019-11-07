@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 
 
-import LoggedOutNavBar from './components/NavBars/LoggedOutNavBar';
+import NavBar from './components/NavBar/NavBar';
 import LoginPage from './pages/LoginPage/LoginPage';
 import CustomerSignUpPage from './pages/CustomerSignUpPage/CustomerSignUpPage';
 import ResturantSignUpPage from './pages/RestaurantSignUpPage/RestaurantSignUpPage';
@@ -16,9 +16,10 @@ import './App.css';
 
 
 function App() {
+  console.log('the app component is re-rendering');
   return(
     <Router>
-      <LoggedOutNavBar/>
+      <NavBar />
       <div className="container">
         <Switch>
           <Route path="/login" exact component={ LoginPage } />
