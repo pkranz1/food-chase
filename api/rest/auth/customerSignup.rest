@@ -1,4 +1,4 @@
-POST http://localhost:8001/api/auth/signup/customer
+POST http://localhost:8080/api/auth/signup/customer
 Content-Type: application/json
 
 {

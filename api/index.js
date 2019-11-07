@@ -1,9 +1,9 @@
 const app = require('./app') // the actual Express app
 const http = require('http')
-const PORT = 8001;
+const config = require('./utils/config');
 
 const server = http.createServer(app)
 
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}\n\n`)
+server.listen(8080, () => {
+  console.log(`Server running on port ${8080}\n\n`)
 })
