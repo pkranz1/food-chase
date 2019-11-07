@@ -14,7 +14,12 @@ app.use(bodyParser.json())
 
 // setup passport and session cookies
 
-app.use(expressSession({ secret: 'asecret', resave: false, saveUninitialized: true }));
+app.use(expressSession({ 
+  secret: 'keyboard cat', 
+  resave: false, 
+  saveUninitialized: true,
+  cookie: { secure: true, }
+ }));
 app.use(passport.initialize());
 app.use(passport.session());
 

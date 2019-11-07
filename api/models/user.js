@@ -19,6 +19,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.VIRTUAL,
       allowNull: false,
     },
+    restaurantOwner: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+      defaultValue: false,
+    },
   }, {
     sequelize,
     modelName: 'user'
@@ -32,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   User.associate = (models) => {
-    models.User.hasMany(models.Restaurant);
+    models.User.hasMany(models.Restaurant, { foreignKey: 'userId' });
   };
 
   return User;

@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Restaurant.associate = (models) => {
-    models.Restaurant.belongsTo(models.User);
+    models.Restaurant.belongsTo(models.User, { foreignKey: 'restaurantId'});
     models.Restaurant.hasMany(models.Food);
   }
 
