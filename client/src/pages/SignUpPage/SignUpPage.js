@@ -4,9 +4,9 @@ import { Redirect } from 'react-router-dom';
 import auth from '../../services/auth';
 import SignUpForm from '../../components/SignUpForm';
 
-import './CustomerSignUpPage.css';
+import './SignUpPage.css';
 
-class CustomerSignUpPage extends React.Component {
+class SignUpPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -73,7 +73,7 @@ class CustomerSignUpPage extends React.Component {
       return(<Redirect to="/restaurant/add-restaurant" />);
     }
     if(redirectTo && !restaurantOwner) {
-      return(<Redirect to="meal-posts" />);
+      return(<Redirect to="/meal-posts" />);
     }
 
     if(!passwordMatch) {
@@ -123,4 +123,4 @@ class CustomerSignUpPage extends React.Component {
   }
 }
 
-export default CustomerSignUpPage;
+export default SignUpPage
