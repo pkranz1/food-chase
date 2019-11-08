@@ -3,12 +3,13 @@ const passport = require('../middleware/authentication');
 const { User } = require('../models');
 
 //customer signup route
-router.post('/signup/customer', (req, res, next) => {
-  const {email, password} = req.body;
+router.post('/signup', (req, res, next) => {
+  const {email, password, restaurantOwner} = req.body;
   
   User.create({
     email,
     password,
+    restaurantOwner,
   })
   .then(user => {
     req.login(user, () => res.status(201).json(user));
@@ -19,23 +20,7 @@ router.post('/signup/customer', (req, res, next) => {
   });
 });
 
-//restaurant signup route
-router.post('/signup/restaurant', (req, res, next) => {
-  const { email, password, } = req.body;
 
-  User.create({
-    email,
-    password,
-    restaurantOwner: true,
-  })
-  .then(user => {
-    req.login(user, () => res.status(201).json(user));
-  })
-  .catch(err => {
-    console.error(err);
-    next();
-  })
-});
 
 //logins in
 router.post('/login', passport.authenticate('local'), (req, res, next) => {

@@ -21,6 +21,26 @@ const auth = {
         return body;
       });
   },
+  signup(email, password, restaurantOwner) {
+    return fetch('/api/auth/signup', {
+      method: 'POST',
+      body: JSON.stringify({ email, password, restaurantOwner }),
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+      .then((response) => {
+        if(!response.ok) {
+          throw new Error('Sign up failed');
+        }
+
+        return response.json();
+      })
+      .then((body) => {
+        this.isAuthenticated = true;
+        return body;
+      });
+  },
   signout(cb) {
     return fetch('/api/auth/logout', { 
       method: 'POST',
