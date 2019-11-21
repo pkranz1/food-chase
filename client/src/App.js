@@ -9,6 +9,7 @@ import {
 import NavBar from './components/NavBar/NavBar';
 import LoginPage from './pages/LoginPage/LoginPage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
+import HomePage from './pages/HomePage/HomePage';
 
 import CreateMealPostPage from './pages/CreateMealPostPage/CreateMealPostPage';
 import CreateRestaurantPage from './pages/CreateRestaurantPage/CreateRestaurantPage';
@@ -26,6 +27,7 @@ function App() {
           <Route path="/signup" component={ SignUpPage } />
           <Route path="/restaurant/create-post" exact component={ CreateMealPostPage }/>
           <Route path="/restaurant/add-restaurant" exact component={ CreateRestaurantPage }/>
+          <Route path="/" exact component={ HomePage } />
         </Switch>
       </div>
     </Router>
